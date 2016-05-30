@@ -8,6 +8,6 @@ class TextFix{
     }
     public static fixAll(input:string):string{
         let fixed = TextFix.fixOrphans(input);
-        return fixed;
+        return fixed2;
     }
 }

@@ -2,7 +2,6 @@
 module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-typescript');
     grunt.loadNpmTasks('grunt-karma');
-    grunt.loadNpmTasks('grunt-concurrent');
     
     grunt.initConfig({
         pkg:grunt.file.readJSON('package.json'),
@@ -27,28 +26,9 @@ module.exports = function(grunt){
                 configFile:'karma.conf.js',
                 autoWatch:true
             }
-        },
-        concurrent:{
-            target:{
-                tasks:['karma','typescript']
-            }
         }
     })
     
-    grunt.registerTask('async-karma','Run async: karma', function(){
-        let done = this.async();
-        setTimeout(()=>{
-            grunt.task.run('karma');
-            done();
-        },0);
-    })
-    grunt.registerTask('async-typescript','Run async: typescript',function(){
-        let done = this.async();
-        setTimeout(()=>{
-            grunt.task.run('typescript');
-            done();
-        },0);
-    })
-    
-    grunt.registerTask('default',['concurrent:target']);
+    // grunt.registerTask('default',['concurrent:target']);
+    grunt.registerTask('tsc',['typescript']);
 }
