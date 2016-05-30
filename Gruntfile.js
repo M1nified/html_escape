@@ -16,9 +16,9 @@ module.exports = function(grunt){
                     watch:true
                 },
                 src: [
-                    "src/jsHtmlTextEscape/jsHtmlTextEscape.ts"
+                    "src/jsHtmlTextEscape/HtmlTextEscape.ts"
                 ],
-                dest: 'bin/jsHtmlTextEscape/jsHtmlTextEscape.js'
+                dest: 'bin/jsHtmlTextEscape/HtmlTextEscape.js'
             }
         },
         karma:{
