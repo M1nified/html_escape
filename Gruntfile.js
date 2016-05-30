@@ -16,9 +16,9 @@ module.exports = function(grunt){
                     watch:true
                 },
                 src: [
-                    "src/tool/TextFix.ts"
+                    "src/jsHtmlTextEscape/jsHtmlTextEscape.ts"
                 ],
-                dest: 'bin/tool/TextFix.js'
+                dest: 'bin/jsHtmlTextEscape/jsHtmlTextEscape.js'
             }
         },
         karma:{
